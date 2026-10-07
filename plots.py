@@ -35,7 +35,7 @@ def plot_temperatures(solution):
   ax.plot(solution.t, P)
 
   ax.set_xlabel("Time (s)")
-  ax.set_ylabel("Power (MW)")
+  ax.set_ylabel("Power (W)")
   ax.set_title("Reactor Power")
   ax.grid()
 
@@ -59,7 +59,7 @@ def plot_temperatures(solution):
   ax2 = ax1.twinx()
 
   ax2.plot(solution.t, P, "--", label="Power")
-  ax2.set_ylabel("Power (MW)")
+  ax2.set_ylabel("Power (W)")
 
   # Combined legend
   lines1, labels1 = ax1.get_legend_handles_labels()
@@ -71,3 +71,4 @@ def plot_temperatures(solution):
   ax1.grid()
 
   plt.show()
+
