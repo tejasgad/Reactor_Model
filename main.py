@@ -9,11 +9,13 @@ import plots
 # Instantiate the parameters object
 params = ReactorParameters()
 
+y0 = initial_conditions(params)
+
 # Print the initial values
-print("Initial fuel temperature:", Tf0, "K")
-print("Initial cladding temperature:", Tc0, "K")
-print("Initial coolant temperature:", Tw0, "K")
-print("Initial precursor concentration (C):", C)
+print("Initial fuel temperature:", y0[0], "K")
+print("Initial cladding temperature:", y0[1], "K")
+print("Initial coolant temperature:", y0[2], "K")
+print("Initial precursor concentration (C):", y0[3])
 
 # Solve the system
 solution = solve_ivp(
