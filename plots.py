@@ -23,7 +23,7 @@ def plot_temperatures(solution):
   ax.set_title("Reactor Temperatures")
   ax.legend()
   ax.grid()
-
+  plt.savefig('temperatures.svg',format='svg', bbox_inches='tight')
   plt.show()
 
   # --------------------------------
@@ -69,6 +69,6 @@ def plot_temperatures(solution):
 
   ax1.set_title("Reactor Power and Thermal Response")
   ax1.grid()
-
+  plt.savefig('power_and_temperatures.svg', format='svg', bbox_inches='tight')
   plt.show()
 

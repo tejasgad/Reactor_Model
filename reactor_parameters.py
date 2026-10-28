@@ -1,4 +1,6 @@
 from dataclasses import dataclass
+from dataclasses import field
+import numpy as np
 
 @dataclass
 class ReactorParameters:
@@ -18,7 +20,22 @@ class ReactorParameters:
     #Kinetics Parameters
     beta: float = 0.0065     # Effective delayed neutron fraction [-]
     Lambda: float = 1e-4     # Neutron generation time [s]
-    lambda_: float = 0.08    # Precursor decay constant [1/s]
+    lambda_: float = 0.0934    # Precursor decay constant [1/s]
 
-    rho0: float = 0.001
-    alpha: float = -1e-5
+
+    rho0: float = 0.001     # Imposed reactivity
+    alpha: float = -1e-5    # Temperature Feedback Coefficient [1/K]
+
+    beta_groups: np.ndarray = field(
+        default_factory=lambda: np.array([
+            0.0005, 0.0010, 0.0015,
+            0.0015, 0.0010, 0.0010
+        ])
+    )
+
+    lambda_groups: np.ndarray = field(
+        default_factory=lambda: np.array([
+            0.02, 0.05, 0.1,
+            0.2, 0.5, 1.0
+        ])
+    )

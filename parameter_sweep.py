@@ -64,7 +64,7 @@ ax.set_xlabel("Coolant Mass Flow Rate (kg/s)")
 ax.set_ylabel("Peak Fuel Temperature (K)")
 ax.set_title("Peak Fuel Temperature vs Coolant Flow Rate")
 ax.grid()
-
+plt.savefig('peak_fuel_vs_flow_rate.svg', format='svg', bbox_inches='tight')
 plt.show()
 
 #Running rho0 Parameter sweep
@@ -115,7 +115,7 @@ ax.set_xlabel("Reactivity")
 ax.set_ylabel("Peak Fuel Temperature (K)")
 ax.set_title("Peak Fuel Temperature vs Reactivity")
 ax.grid()
-
+plt.savefig('Peak_temp_vs_reactivities.svg', format='svg', bbox_inches='tight')
 plt.show()
 
 #Running alpha   Parameter sweep
@@ -166,5 +166,5 @@ ax.set_xlabel("Feedback Coefficient")
 ax.set_ylabel("Peak Fuel Temperature (K)")
 ax.set_title("Peak Fuel Temperature vs Coefficient")
 ax.grid()
-
+plt.savefig('peak_temp_vs_coefficient.svg', format='svg', bbox_inches='tight')
 plt.show()

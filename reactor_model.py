@@ -13,7 +13,7 @@ def model(t, y, params):
   dT_w_dt = (params.K_cw * (T_c - T_w) - params.mdot * params.cp * (T_w - params.T_in)) / params.C_w
 
   # Point Kinetics Equations in terms of normalised power 'p'
-  dP_dt = (rho - params.beta) * P / params.Lambda + C
-  dC_dt = params.beta * P / params.Lambda - C
+  dP_dt = (rho - params.beta) * P / params.Lambda + C * params.lambda_
+  dC_dt = params.beta * P / params.Lambda - C * params.lambda_
 
   return [dT_f_dt, dT_c_dt, dT_w_dt, dP_dt, dC_dt]

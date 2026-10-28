@@ -24,8 +24,8 @@ solution = solve_ivp(
     y0=initial_conditions(params),
     args=(params,),
     method='RK45',
-    rtol=1e-12,
-    atol=1e-14,
+    rtol=1e-8,
+    atol=1e-10,
     dense_output=True
 )
 plots.plot_temperatures(solution)
