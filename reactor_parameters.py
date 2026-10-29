@@ -20,7 +20,7 @@ class ReactorParameters:
     #Kinetics Parameters
     beta: float = 0.0065     # Effective delayed neutron fraction [-]
     Lambda: float = 1e-4     # Neutron generation time [s]
-    lambda_: float = 0.0934    # Precursor decay constant [1/s]
+    lambda_: float = 0.0922    # Precursor decay constant [1/s]
 
 
     rho0: float = 0.001     # Imposed reactivity
