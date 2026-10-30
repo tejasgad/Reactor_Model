@@ -15,4 +15,4 @@ simplified reactor point kinetics and transient thermal behaviour.
 - Six-group delayed neutron point kinetics
 - Limitations and future extensions
 
-[Click here to view the Full Report](docs/Nuclear_Project-Report.pdf)
+[Click here to view the Full Report](docs/Nuclear_Project_Report.pdf)
